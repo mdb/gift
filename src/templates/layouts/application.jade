@@ -1,0 +1,12 @@
+doctype html
+html( lang="en" )
+  head
+    meta( charset="utf-8" )
+    meta( http-equiv="X-UA-Compatible" content="IE=edge" )
+
+    title= title
+    link( rel="stylesheet" href=getRevisionedPath('/assets/stylesheets/application.css') )
+    script( src=getRevisionedPath('/assets/javascripts/application.min.js') )
+  body
+    block content
+    small Built for #{ environment }
