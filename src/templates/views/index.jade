@@ -2,3 +2,7 @@ extends /layouts/application
 block content
   h1='Gift'
   img(src='/assets/images/giver.png', id='giver')
+  - var n = 0
+  ul(class='gifts')
+    while n < 500
+      li(class='gift-#{ n++ }')
