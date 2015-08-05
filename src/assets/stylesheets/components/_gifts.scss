@@ -1,18 +1,32 @@
+@include keyframes(drop) {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 ul.gifts {
   margin: -50px 55%;
-  width: 100px;
+  width: 40px;
+  height: 800px;
+  position: relative;
+  z-index: -100;
 
   li {
+    position: absolute;
     width: 10px;
     height: 10px;
     padding: 0;
-    margin: 0;
     list-style-type: none;
+    top: 100px;
 
     @for $i from 1 through 500 {
       &.gift-#{$i} {
         background-color: rgb(random(256)-1, random(256)-1, random(256)-1);
-        margin-left: -#{random(40)}px;
+        left: #{random(50)}px;
+        @include animation(drop #{random(5)}s linear infinite);
       }
     }
   }
