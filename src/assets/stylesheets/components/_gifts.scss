@@ -1,18 +1,20 @@
 @include keyframes(drop) {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 100%;
+  to {
+    margin-top: 100%;
   }
 }
 
+@mixin drop-fall() {
+  @include animation(drop 10s linear infinite);
+}
+
 ul.gifts {
-  margin: -50px 55%;
+  margin: -50px 53%;
   width: 40px;
   height: 800px;
   position: relative;
   z-index: -100;
+  @include drop-fall();
 
   li {
     position: absolute;
@@ -20,13 +22,13 @@ ul.gifts {
     height: 10px;
     padding: 0;
     list-style-type: none;
-    top: 100px;
 
-    @for $i from 1 through 500 {
+    @for $i from 1 through 200 {
       &.gift-#{$i} {
+        top: -#{random(800)}px;
         background-color: rgb(random(256)-1, random(256)-1, random(256)-1);
         left: #{random(50)}px;
-        @include animation(drop #{random(5)}s linear infinite);
+        //@include drop-fall();
       }
     }
   }
