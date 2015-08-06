@@ -4,5 +4,12 @@ block content
   img(src='/assets/images/giver.png', id='giver')
   - var n = 0
   ul(class='gifts')
-    while n < 500
+    while n < 200
       li(class='gift-#{ n++ }')
+  div(class='computer')
+    div(class='monitor')
+    div(class='keyboard')
+      - var k = 0
+        ul(class='keys')
+          while k < 39
+            li(class='key-#{ k++ }')
