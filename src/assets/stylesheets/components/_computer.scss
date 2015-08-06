@@ -1,0 +1,54 @@
+div.computer {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: 10px;
+
+  div.monitor {
+    width: 200px;
+    height: 150px;
+    background: #000;
+    position: relative;
+    @include border-radius(5px);
+
+    &:after {
+      content: '.';
+      text-indent: -5000px;
+      display: block;
+      border: 2px solid #fff;
+      width: 175px;
+      height: 125px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  div.keyboard {
+    width: 185px;
+    height: 45px;
+    background: #000;
+    margin-top: 3px;
+    margin-left: -8px;
+    padding: 5px 5px 5px 8px;
+    @include border-radius(5px);
+    @include transform(skew(-20deg, 0));
+
+    ul.keys {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        padding: 0;
+        width: 8px;
+        height: 8px;
+        margin: 3px;
+        display: block;
+        float: left;
+        background: #fff;
+      }
+    }
+  }
+}
