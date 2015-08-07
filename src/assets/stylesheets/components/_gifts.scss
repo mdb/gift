@@ -5,7 +5,7 @@
 }
 
 @mixin drop-fall() {
-  @include animation(drop 10s linear infinite);
+  @include animation(drop 10s linear 1);
 }
 
 ul.gifts {
@@ -26,7 +26,6 @@ ul.gifts {
         top: -#{random(800)}px;
         background-color: rgb(random(256)-1, random(256)-1, random(256)-1);
         left: #{random(50)}px;
-        //@include drop-fall();
       }
     }
   }
