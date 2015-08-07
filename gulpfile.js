@@ -57,7 +57,7 @@ var env,
             relativePath = path.replace(absolutePathPrefix, '');
 
         if (jadeLocals.revisionManifest) {
-          return absolutePathPrefix + jadeLocals.revisionManifest[relativePath];
+          return absolutePathPrefix.substring(1) + jadeLocals.revisionManifest[relativePath];
         }
 
         return path;
