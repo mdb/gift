@@ -1,3 +1,15 @@
+@include keyframes(display) {
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin display-pixel($interval) {
+  @include animation-name(display);
+  @include animation-fill-mode(forwards);
+  @include animation-delay(#{$interval + 5}s);
+}
+
 div.computer {
   width: 100px;
   position: absolute;
@@ -14,16 +26,29 @@ div.computer {
     position: relative;
     @include border-radius(5px);
 
-    &:after {
-      content: '.';
-      text-indent: -5000px;
-      display: block;
+    ul.display {
       border: 2px solid #fff;
       width: 175px;
       height: 125px;
       position: absolute;
       top: 10px;
       left: 10px;
+      overflow: hidden;
+
+      li {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(random(256)-1, random(256)-1, random(256)-1);
+        float: left;
+        opacity: 0;
+
+        @for $i from 1 through 221 {
+          &.pixel-#{$i} {
+            @include display-pixel(random());
+            background-color: rgb(random(256)-1, random(256)-1, random(256)-1);
+          }
+        }
+      }
     }
   }
 
@@ -38,13 +63,7 @@ div.computer {
     @include transform(skew(-20deg, 0));
 
     ul.keys {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-
       li {
-        list-style-type: none;
-        padding: 0;
         width: 8px;
         height: 8px;
         margin: 3px;

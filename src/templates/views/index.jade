@@ -8,6 +8,10 @@ block content
       li(class='gift-#{ n++ }')
   div(class='computer')
     div(class='monitor')
+      - var i = 0
+      ul(class='display')
+        while i < 221
+          li(class='pixel-#{ i++ }')
     div(class='keyboard')
       - var k = 0
         ul(class='keys')

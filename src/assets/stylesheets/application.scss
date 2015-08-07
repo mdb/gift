@@ -1,6 +1,15 @@
 @import 'compass';
 @import 'components/components';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
 h1, small {
   display: none;
 }
