@@ -1,12 +1,12 @@
 extends /layouts/application
 block content
   header
-    h1='Gift'
-    img(src='/assets/images/giver.png', id='giver')
+    h1='How computers work'
+    img(src='/assets/images/human.png', id='human')
   - var n = 0
-  ul(class='gifts')
+  ul(class='inputs')
     while n < 200
-      li(class='gift-#{ n++ }')
+      li(class='input-#{ n++ }')
   footer
     div(class='computer')
       div(class='monitor')
