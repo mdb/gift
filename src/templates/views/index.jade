@@ -2,7 +2,7 @@ extends /layouts/application
 block content
   header
     h1='How Computers Work'
-    img(src='assets/images/human.png', id='human')
+    img(src=getRevisionedPath('assets/images/human.png'), id='human')
   - var n = 0
   ul(class='inputs')
     while n < 200
