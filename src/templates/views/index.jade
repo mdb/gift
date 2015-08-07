@@ -1,19 +1,21 @@
 extends /layouts/application
 block content
-  h1='Gift'
-  img(src='/assets/images/giver.png', id='giver')
+  header
+    h1='Gift'
+    img(src='/assets/images/giver.png', id='giver')
   - var n = 0
   ul(class='gifts')
     while n < 200
       li(class='gift-#{ n++ }')
-  div(class='computer')
-    div(class='monitor')
-      - var i = 0
-      ul(class='display')
-        while i < 221
-          li(class='pixel-#{ i++ }')
-    div(class='keyboard')
-      - var k = 0
-        ul(class='keys')
-          while k < 39
-            li(class='key-#{ k++ }')
+  footer
+    div(class='computer')
+      div(class='monitor')
+        - var i = 0
+        ul(class='display')
+          while i < 221
+            li(class='pixel-#{ i++ }')
+      div(class='keyboard')
+        - var k = 0
+          ul(class='keys')
+            while k < 39
+              li(class='key-#{ k++ }')
