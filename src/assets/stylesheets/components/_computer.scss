@@ -17,7 +17,7 @@ div.computer {
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 150px;
 
   div.monitor {
     width: 200px;
@@ -39,7 +39,7 @@ div.computer {
         width: 10px;
         height: 10px;
         background-color: rgb(random(256)-1, random(256)-1, random(256)-1);
-        float: left;
+        float: right;
         opacity: 0;
 
         @for $i from 1 through 221 {
