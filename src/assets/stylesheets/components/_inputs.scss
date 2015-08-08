@@ -9,10 +9,13 @@
 }
 
 ul.inputs {
-  margin: -50px 53%;
   width: 40px;
   height: 800px;
-  position: relative;
+  position: absolute;
+  margin-left: auto;
+  margin-right: -75px;
+  left: 0;
+  right: 50%;
   z-index: -100;
   @include drop-fall();
 
